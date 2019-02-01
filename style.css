@@ -1,0 +1,42 @@
+h1 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+h6 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#stock-search, form {
+    margin: 0 auto;
+    float: none;
+    text-align: center;
+}
+
+#btnBar {
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#logoBox {
+    border-right: 1px solid black;
+}
+
+#articleBox {
+    border-left: 1px solid black;
+
+}
+
+#stock-display {
+    text-align: center;
+}
+
+.stock-btn {
+    padding: 10px;
+}
+
+.stock {
+    border-top: 1px;
+}

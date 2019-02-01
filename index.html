@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stock-Website Practice</title>
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<body>
+    <header>
+        <div class="container-fluid">
+        <h1>Stock$earch</h1>
+        <h6>Data provided for free by IEX. View IEX's terms of use.</h6>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6" id="stock-search">
+                    <form class="center-block">
+                        <input type="text" id="stock-input"></input>
+                        <input type="submit" value="Add a stock" class="btn btn-primary" id="submitBtn">
+                    </form>
+                </div>
+                <div class="col-lg-12" id="btnBar"></div>
+                <div class="row container-fluid" id="stock-display">   
+                    <div class="col-md-3" id="logoBox"></div>
+                    <div class="col-md-6" id="articleBox"></div>     
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./app.js"></script>
+</body>
+</html>
