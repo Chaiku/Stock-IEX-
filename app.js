@@ -1,8 +1,9 @@
 const stocklist= ['MSFT','TSLA','TACO','GOOG'];
+const token="pk_957f699ea136490e9fcc6de83cdb82e9"
 
 const displayStock = function() { //need to create evenly spaced rows so articles don't bleed together.
     const stock = $(this).attr('data-name');
-    const queryURL = `https://api.iextrading.com/1.0/stock/${stock}/batch?types=quote,news&range=1m&last=15`;
+    const queryURL = `https://cloud.iexapis.com/stable/stock/${stock}/batch?token=${token}&types=quote,news&range=1m&last=15`;
 
     $.ajax({
     url: queryURL,
@@ -58,7 +59,7 @@ const render = function () {
 
 const addButton = function(e) {
     e.preventDefault();
-    let validationURL = "https://api.iextrading.com/1.0/ref-data/symbols";
+    let validationURL = `https://cloud.iexapis.com/stable/ref-data/symbols?token=${token}`;
     let validationList = [];
     $.ajax({
         url: validationURL,
@@ -69,6 +70,7 @@ const addButton = function(e) {
         }
 
         const stock = $('#stock-input').val().trim().toUpperCase();
+        
         for (let i = 0; i < validationList.length; i++) {
             if (validationList[i] === stock) {
                 stocklist.push(stock);
