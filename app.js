@@ -10,6 +10,8 @@ const displayStock = function() { //need to create evenly spaced rows so article
     method: 'GET'
 }).then(function(response) {
     console.log(response)
+    $('#logoBox').empty();
+    $('#articleBox').empty();
 
     const stockDiv = $('<div>').addClass('stock');
 
